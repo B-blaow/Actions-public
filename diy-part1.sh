@@ -1,6 +1,7 @@
 # 这个仓库的代码代码更新比较频繁
-echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
-
+#echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
+#sed -i "/helloworld/d" "feeds.conf.default"
+echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
 # 这个仓库的代码是不怎么更新的
 # echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 
