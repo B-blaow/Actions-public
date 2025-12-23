@@ -2,7 +2,7 @@
 # x86固件架构 = amd64
 # 京东云亚瑟固件架构（linux） = arm64
 
-mkdir -p files/etc/openclash/core
+#mkdir -p files/etc/openclash/core
 
 # CLASH_META_URL="https://github.com/1774293824/Github_files/releases/download/backup_files/mihomo-linux-arm64-v1.19.0.gz"
 # wget -qO- $CLASH_META_URL | gunzip -c > files/etc/openclash/core/clash_meta
@@ -10,10 +10,10 @@ mkdir -p files/etc/openclash/core
 # CLASH_META_URL="https://github.com/1774293824/Github_files/releases/download/backup_files/clash-linux-arm64.tar.gz"
 
 # 官方下载地址
-CLASH_META_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz"
-wget -qO- $CLASH_META_URL | tar xOvz > files/etc/openclash/core/clash_meta
+#CLASH_META_URL="https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz"
+#wget -qO- $CLASH_META_URL | tar xOvz > files/etc/openclash/core/clash_meta
 
-chmod +x files/etc/openclash/core/clash*
+#chmod +x files/etc/openclash/core/clash*
 
 
 # GEOIP_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
