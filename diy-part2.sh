@@ -2,21 +2,21 @@
 # sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
 
 # 修改控制面板访问ip
-[ -f package/base-files/files/bin/config_generate ] && sed -i 's/192.168.1.1/192.168.68.1/g' package/base-files/files/bin/config_generate
-[ -f package/base-files/luci2/bin/config_generate ] && sed -i 's/192.168.1.1/192.168.68.1/g' package/base-files/luci2/bin/config_generate
+#[ -f package/base-files/files/bin/config_generate ] && sed -i 's/192.168.1.1/192.168.68.1/g' package/base-files/files/bin/config_generate
+#[ -f package/base-files/luci2/bin/config_generate ] && sed -i 's/192.168.1.1/192.168.68.1/g' package/base-files/luci2/bin/config_generate
 
 # 修改设备名称
-[ -f package/base-files/files/bin/config_generate ] && sed -i 's/OpenWrt/OWrt/g' package/base-files/files/bin/config_generate
-[ -f package/base-files/luci2/bin/config_generate ] && sed -i 's/LEDE/OWrt/g' package/base-files/luci2/bin/config_generate
+#[ -f package/base-files/files/bin/config_generate ] && sed -i 's/OpenWrt/OWrt/g' package/base-files/files/bin/config_generate
+#[ -f package/base-files/luci2/bin/config_generate ] && sed -i 's/LEDE/OWrt/g' package/base-files/luci2/bin/config_generate
 
 # 设置wifi的名称为Pokemon, 加密方式为psk2, wifi密码为39393939
-[ -f package/kernel/mac80211/files/lib/wifi/mac80211.sh ] && sed -i 's/LEDE/Pokemon/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-[ -f package/kernel/mac80211/files/lib/wifi/mac80211.sh ] && sed -i 's/encryption=none/encryption=psk2/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-[ -f package/kernel/mac80211/files/lib/wifi/mac80211.sh ] && sed -i '/set wireless.default_radio${devidx}.encryption=psk2/a\\t\t\tset wireless.default_radio${devidx}.key=39393939' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#[ -f package/kernel/mac80211/files/lib/wifi/mac80211.sh ] && sed -i 's/LEDE/Pokemon/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#[ -f package/kernel/mac80211/files/lib/wifi/mac80211.sh ] && sed -i 's/encryption=none/encryption=psk2/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#[ -f package/kernel/mac80211/files/lib/wifi/mac80211.sh ] && sed -i '/set wireless.default_radio${devidx}.encryption=psk2/a\\t\t\tset wireless.default_radio${devidx}.key=39393939' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 设置无线的国家代码为CN,wifi的默认功率为20
-[ -f package/kernel/mac80211/files/lib/wifi/mac80211.sh ] && sed -i 's/country=US/country=CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-[ -f package/kernel/mac80211/files/lib/wifi/mac80211.sh ] && sed -i '/set wireless.radio${devidx}.disabled=0/a\\t\t\tset wireless.radio${devidx}.txpower=20' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#[ -f package/kernel/mac80211/files/lib/wifi/mac80211.sh ] && sed -i 's/country=US/country=CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#[ -f package/kernel/mac80211/files/lib/wifi/mac80211.sh ] && sed -i '/set wireless.radio${devidx}.disabled=0/a\\t\t\tset wireless.radio${devidx}.txpower=20' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 设置5Gwifi名为JDC，设置LED为蓝色关闭，绿色开启
 # sed -i "/uci commit luci/a uci set wireless.default_radio0.ssid='JDC'\nuci commit wireless\nwifi reload" package/lean/default-settings/files/zzz-default-settings
